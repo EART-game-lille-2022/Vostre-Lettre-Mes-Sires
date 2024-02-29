@@ -44,7 +44,7 @@ public class Connection : MonoBehaviour
                 }
             }
         }
-        
+
         //if (b == null)
         {
             foreach (var pp in StopPoint.stopPoints)
@@ -63,7 +63,7 @@ public class Connection : MonoBehaviour
             if (!b.connections.Contains(this)) b.connections.Add(this);
             gameObject.name = (a.name + " - " + b.name).Replace("Path point - ", "", System.StringComparison.Ordinal);
 
-            if (instantiator) instantiator.UpdateInstances();
+            if (instantiator) instantiator.UpdateInstances();  
         }
     }
 
