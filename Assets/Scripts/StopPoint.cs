@@ -39,10 +39,10 @@ public class StopPoint : MonoBehaviour
         foreach (var conn in connections)
         {
             float a = 0;
-            if(conn.a == this)
-                Vector3.Angle(direction, conn.a.transform.position - conn.b.transform.position);
+            if(conn.b == this)
+                a = Vector3.Angle(direction, conn.a.transform.position - conn.b.transform.position);
             else
-                Vector3.Angle(direction, conn.b.transform.position - conn.a.transform.position);
+                a = Vector3.Angle(direction, conn.b.transform.position - conn.a.transform.position);
 
             if (a < foundangle)
             {
