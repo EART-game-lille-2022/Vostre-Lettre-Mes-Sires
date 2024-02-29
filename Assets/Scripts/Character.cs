@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.EventSystems;
 
-public class Character : MonoBehaviour, IDragHandler
+public class Character : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     public StopPoint onto;
 
@@ -30,6 +30,16 @@ public class Character : MonoBehaviour, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         // throw new System.NotImplementedException();
+        Debug.Log(eventData.pointerDrag);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log(eventData.pointerDrag);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
         Debug.Log(eventData.pointerDrag);
     }
 }

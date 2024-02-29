@@ -32,39 +32,43 @@ public class Connection : MonoBehaviour
 
     private void OnValidate()
     {
-
-
-        //if (a == null)
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.delayCall = () =>
         {
-            foreach (var pp in StopPoint.stopPoints)
+
+            //if (a == null)
             {
-                if (Vector3.Distance(pp.transform.position, spline.EvaluatePosition(0, 0f)) <= 10f)
+                foreach (var pp in StopPoint.stopPoints)
                 {
-                    a = pp;
+                    if (Vector3.Distance(pp.transform.position, spline.EvaluatePosition(0, 0f)) <= 10f)
+                    {
+                        a = pp;
+                    }
                 }
             }
-        }
 
-        //if (b == null)
-        {
-            foreach (var pp in StopPoint.stopPoints)
+            //if (b == null)
             {
-                if (Vector3.Distance(pp.transform.position, spline.EvaluatePosition(0, 1f)) <= 10f)
+                foreach (var pp in StopPoint.stopPoints)
                 {
-                    b = pp;
+                    if (Vector3.Distance(pp.transform.position, spline.EvaluatePosition(0, 1f)) <= 10f)
+                    {
+                        b = pp;
+                    }
                 }
             }
-        }
 
 
-        if (a != null && b != null)
-        {
-            if (!a.connections.Contains(this)) a.connections.Add(this);
-            if (!b.connections.Contains(this)) b.connections.Add(this);
-            gameObject.name = (a.name + " - " + b.name).Replace("Path point - ", "", System.StringComparison.Ordinal);
+            if (a != null && b != null)
+            {
+                if (!a.connections.Contains(this)) a.connections.Add(this);
+                if (!b.connections.Contains(this)) b.connections.Add(this);
+                gameObject.name = (a.name + " - " + b.name).Replace("Path point - ", "", System.StringComparison.Ordinal);
 
-            if (instantiator) instantiator.UpdateInstances();  
-        }
+                if (instantiator) instantiator.UpdateInstances();
+            }
+        };
+        #endif
     }
 
     // c'est a lui de creer
