@@ -33,8 +33,16 @@ namespace NelowGames {
         }
         #endif
 
-        private void OnValidate() {
-            Generate();
+        private void OnValidate()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.delayCall = () =>
+            {
+#endif
+                Generate();
+#if UNITY_EDITOR
+            };
+#endif
         }
 
         private void Start() {

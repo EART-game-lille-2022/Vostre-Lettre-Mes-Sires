@@ -20,14 +20,28 @@ public class Connection : MonoBehaviour
 
     private void OnEnable()
     {
-        spline = GetComponent<SplineContainer>();
-        instantiator = GetComponent<SplineInstantiate>();
-        connections.Add(this);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.delayCall = () =>
+        {
+#endif
+            spline = GetComponent<SplineContainer>();
+            instantiator = GetComponent<SplineInstantiate>();
+            connections.Add(this);
+#if UNITY_EDITOR
+        };
+#endif
     }
 
     private void OnDisable()
     {
-        connections.Remove(this);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.delayCall = () =>
+        {
+#endif
+            connections.Remove(this);
+#if UNITY_EDITOR
+        };
+#endif
     }
 
     private void OnValidate()
@@ -68,7 +82,7 @@ public class Connection : MonoBehaviour
                 if (instantiator) instantiator.UpdateInstances();
             }
         };
-        #endif
+#endif
     }
 
     // c'est a lui de creer
