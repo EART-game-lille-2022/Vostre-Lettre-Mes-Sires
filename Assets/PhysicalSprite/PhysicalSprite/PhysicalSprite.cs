@@ -83,8 +83,9 @@ namespace NelowGames {
             //     vertices[i] = verts[i];
             //     cols[i] = color;
             // }
-            
-            float h = compensateIsoHeight ? 1.573132f : 1f;
+
+            // float h = compensateIsoHeight ? 1.573132f : 1f;
+            float h = compensateIsoHeight ? 1.32f : 1f;
             int triCount = tris.Length;
             int vertCount = verts.Length;
             int[] triangles;

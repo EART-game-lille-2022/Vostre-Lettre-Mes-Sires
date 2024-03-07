@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PhysicalSpriteMaterial
+  m_Name: PhysicalSpriteMaterialNoWind
   m_Shader: {fileID: 4800000, guid: 6318942b20346d6489c62d2e48a90689, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
