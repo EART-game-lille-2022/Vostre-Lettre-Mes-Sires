@@ -31,25 +31,22 @@ namespace NelowGames {
                 Generate();
             }
         }
+        private void OnValidate() {
+            Generate();
+        }
+
         #endif
 
-        private void OnValidate()
-        {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.delayCall = () =>
-            {
-#endif
-                Generate();
-#if UNITY_EDITOR
-            };
-#endif
-        }
 
         private void Start() {
             Generate();
         }
+        public void SetSprite(Sprite s) {
+            _s = sprite = s;
+            Generate();
+        }
 
-        void Update() {
+        void LateUpdate() {
             if(_s != sprite) {
                 Generate();
             }
