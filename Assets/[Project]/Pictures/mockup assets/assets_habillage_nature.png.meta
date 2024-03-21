@@ -130,8 +130,8 @@ TextureImporter:
         y: 718
         width: 532
         height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49666086, y: 0.098639965}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,8 +147,8 @@ TextureImporter:
       name: assets_habillage_nature_1
       rect:
         serializedVersion: 2
-        x: 651
-        y: 762
+        x: 648
+        y: 761
         width: 307
         height: 131
       alignment: 9
@@ -168,7 +168,7 @@ TextureImporter:
       name: assets_habillage_nature_2
       rect:
         serializedVersion: 2
-        x: 371
+        x: 370
         y: 290
         width: 175
         height: 281
@@ -194,7 +194,7 @@ TextureImporter:
         width: 329
         height: 368
       alignment: 9
-      pivot: {x: 0.49190086, y: 0.12589604}
+      pivot: {x: 0.49730036, y: 0.08245169}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,8 +210,8 @@ TextureImporter:
       name: assets_habillage_nature_4
       rect:
         serializedVersion: 2
-        x: 206
-        y: 79
+        x: 207
+        y: 80
         width: 61
         height: 53
       alignment: 9
@@ -236,7 +236,7 @@ TextureImporter:
         width: 328
         height: 102
       alignment: 9
-      pivot: {x: 0.5081237, y: 0.28230473}
+      pivot: {x: 0.50270796, y: 0.05590237}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

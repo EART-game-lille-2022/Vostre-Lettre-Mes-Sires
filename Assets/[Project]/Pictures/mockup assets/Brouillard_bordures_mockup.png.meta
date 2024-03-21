@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -121,18 +121,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Brouillard_bordures_mockup_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 819
+        width: 417
+        height: 160
+      alignment: 9
+      pivot: {x: 0.49574006, y: 0.1336197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ac7abf15728f542a6497b2c1666081
+      internalID: 752938327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brouillard_bordures_mockup_1
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 528
+        width: 182
+        height: 463
+      alignment: 9
+      pivot: {x: 0.6415251, y: 0.068371765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b998db1a2c79e489482a3d4bc24ff5
+      internalID: -151342462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brouillard_bordures_mockup_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 54
+        width: 463
+        height: 603
+      alignment: 9
+      pivot: {x: 0.0952287, y: 0.04485531}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951c269bc65155e4c97b321130a078fd
+      internalID: 296110646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brouillard_bordures_mockup_3
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 73
+        width: 232
+        height: 603
+      alignment: 9
+      pivot: {x: 0.6378237, y: 0.037490502}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cb6f77eb7f4724ba7180b5dbd5aa73
+      internalID: 1086012726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 60ef542fec6a2574998d13f9add99a7b
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brouillard_bordures_mockup_0: 752938327
+      Brouillard_bordures_mockup_1: -151342462
+      Brouillard_bordures_mockup_2: 296110646
+      Brouillard_bordures_mockup_3: 1086012726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
