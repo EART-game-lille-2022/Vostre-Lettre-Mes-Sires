@@ -65,11 +65,11 @@ Material:
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
     - _UseUIAlphaClip: 0
-    - _WindForce: 1.85
+    - _WindForce: 0
     - __dirty: 0
     - _noiseDecoil: 1.63
-    - _windScale: 0.326
-    - _windTime: 0
+    - _windScale: 0.213
+    - _windTime: 0.59448814
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

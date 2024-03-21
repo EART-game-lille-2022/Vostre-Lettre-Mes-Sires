@@ -31,17 +31,22 @@ namespace NelowGames {
                 Generate();
             }
         }
-        #endif
-
         private void OnValidate() {
             Generate();
         }
 
+        #endif
+
+
         private void Start() {
             Generate();
         }
+        public void SetSprite(Sprite s) {
+            _s = sprite = s;
+            Generate();
+        }
 
-        void Update() {
+        void LateUpdate() {
             if(_s != sprite) {
                 Generate();
             }
