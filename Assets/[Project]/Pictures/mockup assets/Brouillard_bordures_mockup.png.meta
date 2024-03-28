@@ -126,10 +126,10 @@ TextureImporter:
       name: Brouillard_bordures_mockup_0
       rect:
         serializedVersion: 2
-        x: 130
-        y: 819
-        width: 417
-        height: 160
+        x: 94
+        y: 805
+        width: 493
+        height: 195
       alignment: 9
       pivot: {x: 0.49574006, y: 0.1336197}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,9 +169,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 54
-        width: 463
-        height: 603
+        y: 46
+        width: 469
+        height: 611
       alignment: 9
       pivot: {x: 0.0952287, y: 0.04485531}
       border: {x: 0, y: 0, z: 0, w: 0}
