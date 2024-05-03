@@ -31,9 +31,9 @@ namespace NelowGames {
                 Generate();
             }
         }
-        private void OnValidate() {
-            Generate();
-        }
+        //private void OnValidate() {
+          //  Generate();
+        //}
 
         #endif
 
