@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4283396294490975482}
   - component: {fileID: 4043247728124182319}
+  - component: {fileID: -6383304134930949946}
   m_Layer: 0
   m_Name: gros cailloux
   m_TagString: Untagged
@@ -84,3 +85,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6383304134930949946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785616805030157968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02fdbc4d802ba14a8b1c70f8681ccc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1863592208, guid: 75464cac33463da4197ee49be788eb80, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  compensateIsoHeight: 1
+  flip: 0
+  bothSides: 0
+  defaultMat: {fileID: 2100000, guid: 26b2bd77f14dd9f48892675fba6a4a1f, type: 2}
