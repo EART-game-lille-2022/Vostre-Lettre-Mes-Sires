@@ -126,14 +126,25 @@ TextureImporter:
       name: gros batiemnts_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 424
-        width: 545
-        height: 580
+        x: 285
+        y: 496
+        width: 708
+        height: 528
       alignment: 9
       pivot: {x: 0.5016299, y: 0.057433765}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -354, y: -176}
+        - {x: -354, y: -75}
+        - {x: -269, y: -36}
+        - {x: -259, y: 263}
+        - {x: -130, y: 264}
+        - {x: 266, y: 264}
+        - {x: 269, y: -15}
+        - {x: 354, y: -47}
+        - {x: 354, y: -168}
+        - {x: 119, y: -264}
+        - {x: -119, y: -264}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -147,14 +158,24 @@ TextureImporter:
       name: gros batiemnts_1
       rect:
         serializedVersion: 2
-        x: 574
-        y: 34
-        width: 442
-        height: 659
+        x: 0
+        y: 35
+        width: 585
+        height: 533
       alignment: 9
       pivot: {x: 0.4979904, y: 0.063315265}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -292.5, y: -266.5}
+        - {x: -292.5, y: -106.5}
+        - {x: -246.5, y: -83.5}
+        - {x: -243.5, y: 266.5}
+        - {x: 88.5, y: 266.5}
+        - {x: 91.5, y: 78.5}
+        - {x: 158.5, y: 79.5}
+        - {x: 237.16925, y: -115.55417}
+        - {x: 292.5, y: -116.5}
+        - {x: 292.5, y: -266.5}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -173,7 +194,7 @@ TextureImporter:
         width: 11
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +215,7 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

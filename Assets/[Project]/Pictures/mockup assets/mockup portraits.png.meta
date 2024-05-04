@@ -126,10 +126,10 @@ TextureImporter:
       name: mockup portraits_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 832
-        width: 264
-        height: 518
+        x: 2
+        y: 2057
+        width: 576
+        height: 1268
       alignment: 9
       pivot: {x: 0.45564562, y: 0.027546886}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: mockup portraits_1
       rect:
         serializedVersion: 2
-        x: 378
-        y: 890
-        width: 273
-        height: 460
+        x: 1060
+        y: 2278
+        width: 527
+        height: 929
       alignment: 9
       pivot: {x: 0.5428925, y: 0.07234497}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: mockup portraits_2
       rect:
         serializedVersion: 2
-        x: 668
-        y: 1008
-        width: 411
-        height: 336
+        x: 1791
+        y: 2551
+        width: 827
+        height: 774
       alignment: 9
       pivot: {x: 0.5028492, y: 0.13407499}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: mockup portraits_3
       rect:
         serializedVersion: 2
-        x: 748
-        y: 531
-        width: 307
-        height: 374
+        x: 1888
+        y: 1360
+        width: 730
+        height: 798
       alignment: 9
       pivot: {x: 0.5000002, y: 0.09611242}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,12 +210,12 @@ TextureImporter:
       name: mockup portraits_4
       rect:
         serializedVersion: 2
-        x: 720
-        y: 12
-        width: 346
-        height: 432
+        x: 1802
+        y: 96
+        width: 816
+        height: 893
       alignment: 9
-      pivot: {x: 0.5101528, y: 0.033784516}
+      pivot: {x: 0.5294357, y: 0.077835046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: mockup portraits_5
       rect:
         serializedVersion: 2
-        x: 438
-        y: 140
-        width: 229
-        height: 462
+        x: 1121
+        y: 361
+        width: 446
+        height: 1120
       alignment: 9
       pivot: {x: 0.4590926, y: 0.05138539}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: mockup portraits_6
       rect:
         serializedVersion: 2
-        x: 4
-        y: 430
-        width: 411
-        height: 395
+        x: 126
+        y: 1096
+        width: 833
+        height: 943
       alignment: 9
       pivot: {x: 0.43162277, y: 0.043473642}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: mockup portraits_7
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 315
-        height: 392
+        x: 41
+        y: 50
+        width: 691
+        height: 939
       alignment: 9
       pivot: {x: 0.36989313, y: 0.04894169}
       border: {x: 0, y: 0, z: 0, w: 0}
