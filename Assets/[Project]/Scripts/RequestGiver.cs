@@ -17,7 +17,7 @@ public class RequestGiver : MonoBehaviour
         print("in");
         if (_collisionRT != null)
         {
-        pawnsInZonePockets.Add(_collisionRT);
+            pawnsInZonePockets.Add(_collisionRT);
 
         }
     }
