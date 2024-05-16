@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 namespace NelowGames {
@@ -56,9 +57,16 @@ namespace NelowGames {
         void Generate() { 
             if(sprite == null) return;
             _s = sprite;
-
-            MeshFilter filter = GetComponent<MeshFilter>();
             MeshRenderer renderer = GetComponent<MeshRenderer>();
+            MeshFilter filter = GetComponent<MeshFilter>();
+/*            if (GetComponent<MeshRenderer>() == null)
+            {
+                return;
+            }
+            if (GetComponent<MeshFilter>()==null)
+            {
+                return;
+            }*/
             MaterialPropertyBlock block = new MaterialPropertyBlock();
             renderer.GetPropertyBlock(block);
             block.SetTexture("_MainTex", sprite.texture);
