@@ -86,7 +86,7 @@ public class Character : MonoBehaviour/*, IDragHandler*/, IPointerDownHandler, I
         {
             Vector3 pos = ray.GetPoint(dist);
             Debug.DrawLine(startPointerPos, pos, Color.red, 1);
-            if (Vector3.Distance(startPointerPos, pos) > .5f)
+            if (Vector3.Distance(startPointerPos, pos) > 1f)
             {
                 Connection c = onto.FindByDirection((pos - transform.position).normalized);
                 Debug.Log(c, c.gameObject);
