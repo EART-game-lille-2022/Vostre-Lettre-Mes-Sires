@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
-namespace NelowGames {
+namespace NelowGames
+{
     [ExecuteAlways]
-    public class PhysicalSprite : MonoBehaviour {
+    public class PhysicalSprite : MonoBehaviour
+    {
         public Sprite sprite;
         Sprite _s;
         public Color color = Color.white;
@@ -15,14 +14,16 @@ namespace NelowGames {
         public bool compensateIsoHeight = true;
         public bool flip = false;
         public bool bothSides = false;
-        
+        bool warnPreventActivated = true;
 
-        #if UNITY_EDITOR
+
+#if UNITY_EDITOR
         public Material defaultMat;
         void Reset()
         {
             SpriteRenderer sr = GetComponent<SpriteRenderer>();
-            if(sr) {
+            if (sr)
+            {
                 sprite = sr.sprite;
                 color = sr.color;
                 DestroyImmediate(sr);
@@ -32,47 +33,63 @@ namespace NelowGames {
                 Generate();
             }
         }
-        //private void OnValidate() {
-          //  Generate();
-        //}
-
-        #endif
-
-
-        private void Start() {
+        private void OnValidate()
+        {
+            if (UnityEditor.EditorApplication.isPlaying)
+            {
+                if (warnPreventActivated)
+                {
+                    return;
+                }
+            }
             Generate();
         }
-        public void SetSprite(Sprite s) {
+
+#endif
+
+
+        private void Start()
+        {
+
+            Generate();
+            warnPreventActivated = false;
+        }
+        public void SetSprite(Sprite s)
+        {
             _s = sprite = s;
             Generate();
         }
 
-        void LateUpdate() {
-            if(_s != sprite) {
+        void LateUpdate()
+        {
+            if (_s != sprite)
+            {
                 Generate();
             }
         }
 
         // [Button]
-        void Generate() { 
-            if(sprite == null) return;
+        void Generate()
+        {
+            if (sprite == null) return;
             _s = sprite;
             MeshRenderer renderer = GetComponent<MeshRenderer>();
             MeshFilter filter = GetComponent<MeshFilter>();
-/*            if (GetComponent<MeshRenderer>() == null)
+            if (GetComponent<MeshRenderer>() == null)
             {
                 return;
             }
-            if (GetComponent<MeshFilter>()==null)
+            if (GetComponent<MeshFilter>() == null)
             {
                 return;
-            }*/
-            MaterialPropertyBlock block = new MaterialPropertyBlock();
+            }
+            MaterialPropertyBlock block = new();
             renderer.GetPropertyBlock(block);
             block.SetTexture("_MainTex", sprite.texture);
             renderer.SetPropertyBlock(block);
 
-            if(_Mesh == null) {
+            if (_Mesh == null)
+            {
                 _Mesh = new Mesh();
                 _Mesh.name = sprite.name;
                 filter.mesh = _Mesh;
@@ -102,53 +119,63 @@ namespace NelowGames {
             int triCount = tris.Length;
             int vertCount = verts.Length;
             int[] triangles;
-            
+
             Vector3[] vertices;
             Vector2[] uv;
             Color[] cols;
 
-            if(bothSides) {
-                triangles = new int[triCount*2];
-                vertices = new Vector3[vertCount*2];
-                cols = new Color[vertCount*2];
-                uv = new Vector2[vertCount*2];
-                
-                for (int i = 0; i < vertCount; i++)
-                    uv[i] = uv[vertCount+i] = sprite.uv[i];
+            if (bothSides)
+            {
+                triangles = new int[triCount * 2];
+                vertices = new Vector3[vertCount * 2];
+                cols = new Color[vertCount * 2];
+                uv = new Vector2[vertCount * 2];
 
-                for (int i = 0; i < triCount; i+=3) {
+                for (int i = 0; i < vertCount; i++)
+                    uv[i] = uv[vertCount + i] = sprite.uv[i];
+
+                for (int i = 0; i < triCount; i += 3)
+                {
                     triangles[i] = tris[i];
-                    triangles[i+1] = tris[i+2];
-                    triangles[i+2] = tris[i+1];
+                    triangles[i + 1] = tris[i + 2];
+                    triangles[i + 2] = tris[i + 1];
                 }
                 for (int i = 0; i < triCount; i++)
-                    triangles[triCount+i] = vertCount+tris[i];
+                    triangles[triCount + i] = vertCount + tris[i];
 
-                for (int i = 0; i < vertCount*2; i++) {
-                    vertices[i] = verts[i%vertCount];
+                for (int i = 0; i < vertCount * 2; i++)
+                {
+                    vertices[i] = verts[i % vertCount];
                     vertices[i].y *= h;
                     cols[i] = color;
                 }
 
-            } else { 
+            }
+            else
+            {
                 triangles = new int[triCount];
                 vertices = new Vector3[vertCount];
                 cols = new Color[vertCount];
                 uv = sprite.uv;
-                
-                for (int i = 0; i < vertCount; i++) {
+
+                for (int i = 0; i < vertCount; i++)
+                {
                     vertices[i] = verts[i];
                     vertices[i].y *= h;
                     cols[i] = color;
                 }
-                
-                if(flip) {
-                    for (int i = 0; i < triCount; i+=3) {
+
+                if (flip)
+                {
+                    for (int i = 0; i < triCount; i += 3)
+                    {
                         triangles[i] = tris[i];
-                        triangles[i+1] = tris[i+2];
-                        triangles[i+2] = tris[i+1];
+                        triangles[i + 1] = tris[i + 2];
+                        triangles[i + 2] = tris[i + 1];
                     }
-                } else {
+                }
+                else
+                {
                     for (int i = 0; i < tris.Length; i++)
                         triangles[i] = tris[i];
                 }

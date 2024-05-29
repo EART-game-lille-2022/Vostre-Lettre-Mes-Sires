@@ -51,9 +51,9 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SpecularHighlights: 1
-    - _WindForce: 0
-    - _windScale: 23.25
-    - _windTime: 0
+    - _WindForce: 1
+    - _windScale: 0.155
+    - _windTime: 0.592
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
