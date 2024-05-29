@@ -12,7 +12,7 @@ public class CamController : MonoBehaviour
     
     Vector3 rightClickPos;
 
-    public void Awake()
+    public void start()
     {
         zoom = cam.orthographicSize;
     }

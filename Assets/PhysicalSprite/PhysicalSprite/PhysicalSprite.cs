@@ -14,7 +14,6 @@ namespace NelowGames
         public bool compensateIsoHeight = true;
         public bool flip = false;
         public bool bothSides = false;
-        bool warnPreventActivated = true;
 
 
 #if UNITY_EDITOR
@@ -33,26 +32,17 @@ namespace NelowGames
                 Generate();
             }
         }
-        private void OnValidate()
+        /*private void OnValidate()
         {
-            if (UnityEditor.EditorApplication.isPlaying)
-            {
-                if (warnPreventActivated)
-                {
-                    return;
-                }
-            }
             Generate();
-        }
+        }*/
 
 #endif
 
 
         private void Start()
         {
-
             Generate();
-            warnPreventActivated = false;
         }
         public void SetSprite(Sprite s)
         {
